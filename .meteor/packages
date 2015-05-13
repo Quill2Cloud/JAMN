@@ -12,6 +12,11 @@ meteor-platform
 
 iron:router
 
+# Performance Monitoring
+
+meteorhacks:kadira
+meteorhacks:zones
+
 # Styling
 
 fortawesome:fontawesome
