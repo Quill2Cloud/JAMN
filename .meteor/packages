@@ -17,6 +17,10 @@ iron:router
 meteorhacks:kadira
 meteorhacks:zones
 
+# Analytics
+
+okgrow:analytics
+
 # Styling
 
 fortawesome:fontawesome
