@@ -122,6 +122,7 @@
       "_": false,               // Underscore.js
       "$": false,               // jQuery
       "Router": false,          // iron-router
+      "BrowserPolicy": false,   // browser-policy
       "SubsManager": false      // subs-manager
     }
 }

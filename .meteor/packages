@@ -11,6 +11,7 @@ meteor-platform
 # Main Packages
 
 iron:router
+browser-policy
 
 # Performance Monitoring
 
