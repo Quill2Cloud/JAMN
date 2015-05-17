@@ -14,6 +14,7 @@ var trusted = [
   'http://hn.inspectlet.com',
   'http://heapanalytics.com',
   'http://cdn.mouseflow.com',
+  'https://n2.mouseflow.com',
   'http://www.navilytics.com'
 ];
 
