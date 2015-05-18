@@ -12,6 +12,10 @@
       return this.mirror.call('reset'); // this.ddp is a connection to the mirror
     });
 
+    this.Given(/^I am not logged in$/, function () {
+      return this.mirror.call('logout');
+    });
+
     this.When(/^I navigate to "([^"]*)"$/, function (relativePath, callback) {
       // WebdriverIO supports Promises/A+ out the box, so you can return that too
       this.browser. // this.browser is a pre-configured WebdriverIO + PhantomJS instance
@@ -26,6 +30,19 @@
         getTitle().should.become(expectedTitle).and.notify(callback);
     });
 
+    this.Then(/^I should see the logo "([^"]*)"$/, function (expectedTitle, callback) {
+      // you can use chai-as-promised in step definitions also
+      this.browser.
+        waitForVisible('.logo'). // WebdriverIO chain-able promise magic
+        getText('.logo').should.become(expectedTitle).and.notify(callback);
+    });
+
+    this.Then(/^the "([^"]*)" tab is shown$/, function (expectedTab, callback) {
+      this.browser.
+      waitForVisible('.active').
+      getText('.active').should.become(expectedTab).and.notify(callback);
+    });
+
   };
 
-})(); 
+})();

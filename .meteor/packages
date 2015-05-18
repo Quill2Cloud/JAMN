@@ -25,6 +25,8 @@ okgrow:analytics
 # Styling
 
 fortawesome:fontawesome
+fourseven:scss
+fezvrasta:bootstrap-material-design-noicons
 
 # Testing
 

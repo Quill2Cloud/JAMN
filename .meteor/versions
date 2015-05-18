@@ -17,7 +17,9 @@ deps@1.0.7
 ejson@1.0.6
 email@1.0.6
 fastclick@1.0.3
+fezvrasta:bootstrap-material-design-noicons@0.3.0
 fortawesome:fontawesome@4.3.0
+fourseven:scss@3.0.0
 geojson-utils@1.0.3
 html-tools@1.0.4
 htmljs@1.0.4
@@ -69,6 +71,7 @@ spacebars@1.0.6
 spacebars-compiler@1.0.6
 templating@1.1.1
 tracker@1.0.7
+twbs:bootstrap-noglyph@3.3.2
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4

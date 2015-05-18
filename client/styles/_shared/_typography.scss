@@ -1,0 +1,33 @@
+body {
+  font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
+}
+a:link, a:visited, a:active, a:hover {
+  text-decoration: none;
+}
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+.title {
+  font-weight: 400;
+  font-size: 18px;
+}
+.heading {
+  font-weight: 700;
+  font-size: 14px;
+}
+.body {
+  font-weight: 400;
+  font-size: 14px;
+}
+.action {
+  font-weight: 700;
+  font-size: 12px;
+}
+.subtle {
+  font-weight: 400;
+  font-size: 12px;
+}
+.muted {
+  opacity: 0.7;
+}

@@ -1,0 +1,53 @@
+$primaryColor: #1976D2; // Blue - or slightly darker blue: #2971b2
+$accentColor: #D32F2F; // Red
+$fallbackColor: #D32F2F; // Red
+$highlightColor: #FFFF00; // Yellow
+$backgroundColor: #F5F5F5; // Light grey
+$backgroundTexture: url("img/handmadepaper.png");
+$cardColor: #FFFFFF; // White
+$labelColor: #757575; //Dark grey
+
+$successColor: #A5D6A7;  // Green
+$infoColor: #BBDEFB;  // Light Blue
+$warningColor: #FFF9C4;  // Yellow
+$errorColor: #FFCDD2;  // Red
+
+$darkTextColor: #0f0f0f;
+$darkPrimaryTextOpacity: 0.7;
+$darkSecondaryTextOpacity: 0.54;
+$darkHintsOpacity: 0.26;
+
+$lightTextColor: #FFFFFF;
+$lightPrimaryTextOpacity: 1;
+$lightSecondaryTextOpacity: 0.7;
+$lightHintsOpacity: 0.3;
+
+body {
+  background-image: url("img/handmadepaper.png");
+}
+a, a:link, a:visited, a:active {
+  color: $darkTextColor;
+  opacity: $darkPrimaryTextOpacity;
+}
+a:hover {
+  color: $accentColor;
+  opacity: $lightPrimaryTextOpacity !important;
+}
+.header {
+  background-color: $primaryColor;
+  color: $lightTextColor;
+  a {
+    color: $lightTextColor;
+    opacity: $lightPrimaryTextOpacity;
+  }
+}
+.nav-tabs {
+  background-color: $primaryColor;
+  a {
+    color: $lightTextColor;
+    opacity: $lightPrimaryTextOpacity;
+  }
+  .active {
+    border-bottom: 4px solid $highlightColor;
+  }
+}
