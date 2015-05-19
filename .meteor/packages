@@ -31,3 +31,10 @@ fezvrasta:bootstrap-material-design-noicons
 # Testing
 
 xolvio:cucumber
+
+# Database
+
+aldeed:simple-schema
+aldeed:collection2
+ongoworks:security
+alanning:roles

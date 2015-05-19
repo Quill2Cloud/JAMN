@@ -125,6 +125,9 @@
       "RouteController": false,
       "BrowserPolicy": false,   // browser-policy
       "SubsManager": false,      // subs-manager
-      "Controllers": true
+      "SimpleSchema": true,
+      "Controllers": true,
+      "Schemas": true,
+      "Collections": true
     }
 }

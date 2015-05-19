@@ -13,7 +13,7 @@
     });
 
     this.Given(/^I am not logged in$/, function () {
-      return this.mirror.call('logout');
+      return this.mirror.call('reset');
     });
 
     this.When(/^I navigate to "([^"]*)"$/, function (relativePath, callback) {
