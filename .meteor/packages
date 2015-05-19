@@ -12,6 +12,7 @@ meteor-platform
 
 iron:router
 browser-policy
+ongoworks:speakingurl
 
 # Performance Monitoring
 
