@@ -81,7 +81,8 @@ Collections.events.attachSchema(Schemas.events);
 if (Meteor.isServer) {
   Meteor.methods({
     logEvent: function(event) {
-      event.ip = this.connection.clientAddress;
+      var ip = this.connection.clientAddress ? this.connection.clientAddress : '127.0.0.1';
+      event.ip = ip;
       Collections.events.insert(event);
     }
   });
