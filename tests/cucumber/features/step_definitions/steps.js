@@ -13,13 +13,19 @@
     });
 
     this.Given(/^I am not logged in$/, function () {
-      return this.mirror.call('reset');
+      return this.mirror.call('log-out');
     });
 
     this.When(/^I navigate to "([^"]*)"$/, function (relativePath, callback) {
       // WebdriverIO supports Promises/A+ out the box, so you can return that too
       this.browser. // this.browser is a pre-configured WebdriverIO + PhantomJS instance
         url(url.resolve(process.env.ROOT_URL, relativePath)). // process.env.ROOT_URL always points to the mirror
+        call(callback);
+    });
+
+    this.When(/^I click on the link "([^"]*)"$/, function (element, callback) {
+      this.browser.
+        click(element).
         call(callback);
     });
 
