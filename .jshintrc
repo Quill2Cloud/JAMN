@@ -124,10 +124,15 @@
       "Router": false,          // iron-router
       "RouteController": false,
       "BrowserPolicy": false,   // browser-policy
-      "SubsManager": false,      // subs-manager
+      "SubsManager": true,      // subs-manager
       "SimpleSchema": true,
       "Controllers": true,
       "Schemas": true,
-      "Collections": true
+      "Collections": true,
+      // Global Functions
+      "getEventData": true,
+      "setMessage": true,
+      "clearMessage": true,
+      "getOptions": true   
     }
 }

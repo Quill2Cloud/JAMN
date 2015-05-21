@@ -12,7 +12,9 @@ meteor-platform
 
 iron:router
 browser-policy
+raix:handlebar-helpers
 ongoworks:speakingurl
+meteorhacks:subs-manager
 
 # Performance Monitoring
 

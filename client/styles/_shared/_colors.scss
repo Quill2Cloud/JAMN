@@ -51,3 +51,9 @@ a:hover {
     border-bottom: 4px solid $highlightColor;
   }
 }
+.alert {
+  a, a:link, a:visited, a:active  {
+    color: $lightTextColor !important;
+    opacity: $lightPrimaryTextOpacity !important;
+  }
+}

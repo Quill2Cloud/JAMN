@@ -29,6 +29,10 @@
         call(callback);
     });
 
+    this.When(/^there are (\d+) songs$/, function (number) {
+      return this.mirror.call('insertSongs', number);
+    });
+
     this.Then(/^I should see the title "([^"]*)"$/, function (expectedTitle, callback) {
       // you can use chai-as-promised in step definitions also
       this.browser.
@@ -45,10 +49,15 @@
 
     this.Then(/^the "([^"]*)" tab is shown$/, function (expectedTab, callback) {
       this.browser.
-      waitForVisible('.active').
       getText('.active').should.become(expectedTab).and.notify(callback);
     });
 
+    this.Then(/^an "([^"]*)" message is displayed saying "([^"]*)"$/, function (expectedIcon, expectedMessage, callback) {
+      this.browser.
+      // TODO: validate it is the correct icon
+      isVisible('#message-icon').
+      getText('#message-text').should.become(expectedMessage).and.notify(callback);
+    });
   };
 
 })();

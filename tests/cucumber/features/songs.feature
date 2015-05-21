@@ -18,3 +18,8 @@ Feature: Show songs that have been shared
   Scenario:
     When I navigate to "/songs"
     Then the "Songs" tab is shown
+
+  @dev
+  Scenario:
+    When there are 0 songs
+    Then an "info" message is displayed saying "Sorry, no songs found."

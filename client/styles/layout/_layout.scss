@@ -30,3 +30,12 @@ html, body {
   margin-right: 3px;
   @include vertical-align;
 }
+.alert {
+  margin-top: 10px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  a, a:link, a:visited, a:active, a:hover  {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
