@@ -11,12 +11,31 @@
       // TODO: if user is logged in call logout
     },
     'insertSongs': function (number) {
-      var songs = [];
       Collections.songs.remove({});
       _.times(number, function (n) {
         Collections.songs.insert(songs[n]);
       });
     }
   });
+
+  var users = [
+    {
+      "_id" : "2ZyzagoaDjsbd9q6Y",
+      "createdAt" : "2015-01-31T07:02:47.625Z",
+      "username" : "Tester 1"
+    }
+  ];
+
+  var songs = [
+    {
+      "_id" : "4m5e5wuZGmXrmbnkF",
+      "createdAt" : "2015-02-02T03:16:26.775Z",
+      "createdBy" : "2ZyzagoaDjsbd9q6Y",
+      "artist" : "Artist",
+      "artistSlug" : "artist",
+      "title" : "Title",
+      "titleSlug" : "title"
+    }
+  ];
 
 })();

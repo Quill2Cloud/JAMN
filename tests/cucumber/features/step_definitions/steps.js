@@ -16,6 +16,10 @@
       return this.mirror.call('log-out');
     });
 
+    this.Given(/^there are submitted songs$/, function () {
+      return this.mirror.call('insertSongs', 1);
+    });
+
     this.When(/^I navigate to "([^"]*)"$/, function (relativePath, callback) {
       // WebdriverIO supports Promises/A+ out the box, so you can return that too
       this.browser. // this.browser is a pre-configured WebdriverIO + PhantomJS instance
@@ -41,9 +45,8 @@
     });
 
     this.Then(/^I should see the logo "([^"]*)"$/, function (expectedTitle, callback) {
-      // you can use chai-as-promised in step definitions also
       this.browser.
-        waitForVisible('.logo'). // WebdriverIO chain-able promise magic
+        waitForVisible('.logo').
         getText('.logo').should.become(expectedTitle).and.notify(callback);
     });
 

@@ -1,4 +1,6 @@
 <template name="song">
+  {{#if artist}}
+    {{> _viewSong}}
     <ul class="nav nav-tabs" id="tabs">
       <li role="presentation" class="active"><a class="tab" href="#music" id="music-tab">Music</a></li>
       <li role="presentation"><a class="tab" href="#comments" id="comments-tab">Comments</a></li>
@@ -19,4 +21,5 @@
         {{> _secondaryMessage}}
       </div>
     </div>
+  {{/if}}
 </template>

@@ -8,6 +8,12 @@ Feature: Show a single songs that have been shared
 
   Background:
     Given I am not logged in
+    And   there are submitted songs
+
+  @dev
+  Scenario:
+    When I navigate to "/songs/no-artist/no-title"
+    Then an "info" message is displayed saying "Sorry, couldn't find the song you were looking for."
 
   @dev
   Scenario:
