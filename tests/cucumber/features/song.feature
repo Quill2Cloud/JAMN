@@ -19,6 +19,7 @@ Feature: Show a single songs that have been shared
   Scenario:
     When I navigate to "/songs/artist/title"
     Then the "Music" tab is shown
+    And  the song title is "Artist - Title"
 
   @dev
   Scenario:

@@ -61,6 +61,11 @@
       isVisible('#message-icon').
       getText('#message-text').should.become(expectedMessage).and.notify(callback);
     });
+
+    this.Then(/^the song title is "([^"]*)"$/, function (expectedTitle, callback) {
+      this.browser.
+      getText('#song-title').should.become(expectedTitle).and.notify(callback);
+    });
   };
 
 })();
