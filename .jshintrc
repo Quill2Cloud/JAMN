@@ -125,6 +125,7 @@
       "RouteController": false,
       "BrowserPolicy": false,   // browser-policy
       "SubsManager": true,      // subs-manager
+      "AccountsTemplates": true, // useraccounts
       "SimpleSchema": true,
       "Controllers": true,
       "Schemas": true,
@@ -133,6 +134,6 @@
       "getEventData": true,
       "setMessage": true,
       "clearMessage": true,
-      "getOptions": true   
+      "getOptions": true
     }
 }

@@ -8,6 +8,7 @@ Feature: Show a single songs that have been shared
 
   Background:
     Given I am not logged in
+    And   there are registered users
     And   there are submitted songs
 
   @dev
@@ -20,6 +21,7 @@ Feature: Show a single songs that have been shared
     When I navigate to "/songs/artist/title"
     Then the "Music" tab is shown
     And  the song title is "Artist - Title"
+    And  the song username is "Tester 1"
 
   @dev
   Scenario:
@@ -43,20 +45,24 @@ Feature: Show a single songs that have been shared
 
   @dev
   Scenario:
-    When I click on the link "#music-tab"
+    When I navigate to "/songs/artist/title/comments"
+    And  I click on the link "#music-tab"
     Then the "Music" tab is shown
 
   @dev
   Scenario:
-    When I click on the link "#comments-tab"
+    When I navigate to "/songs/artist/title/music"
+    And I click on the link "#comments-tab"
     Then the "Comments" tab is shown
 
   @dev
   Scenario:
-    When I click on the link "#lists-tab"
+    When I navigate to "/songs/artist/title/comments"
+    And I click on the link "#lists-tab"
     Then the "Lists" tab is shown
 
   @dev
   Scenario:
-    When I click on the link "#lists-add-tab"
+    When I navigate to "/songs/artist/title/lists"
+    And  I click on the link "#lists-add-tab"
     Then the "Add to List" tab is shown

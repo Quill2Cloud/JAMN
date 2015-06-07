@@ -1,0 +1,20 @@
+<template name="userMenu">
+  {{#if $.Meteor.userId}}
+    <div class="header-item dropdown">
+      <div class="view user-menu-header dropdown-top-level">
+        <a class="heading" href="/" id="user-menu-username">{{username}} <i class="fa fa-caret-down"></i></a>
+      </div>
+      <div class="dropdown-menu user-menu">
+        <ul role="menu">
+          <li><a href="{{profileUrl}}" class="menu-label" id="user-menu-profile">Profile</a></li>
+          <li><a href="{{pathFor route='sign-out'}}" class="menu-label" id="user-menu-sign-out">Sign Out</a></li>
+        </ul>
+      </div>
+    </div>
+  {{else}}
+    <div class="header-item">
+      <a class="heading" href="{{pathFor route='register' data=this}}" id="user-menu-register">Register</a>&nbsp;&nbsp;
+      <a class="heading" href="{{pathFor route='sign-in' data=this}}" id="user-menu-sign-in">Sign In</a>
+    </div>
+  {{/if}}
+</template>

@@ -1,0 +1,36 @@
+.dropdown-menu {
+  display:none;
+  position:absolute;
+  top: 30px;
+  margin-left: -40px;
+  min-width: 100px;
+  white-space:nowrap;
+  padding-top:0px;
+  padding-bottom: 0px;
+  ul{
+    background:white;
+    padding:5px;
+    margin-bottom: 0px;
+    min-width:100px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px black(0.35);
+    list-style-type: none;
+    float: left;
+    width: 100%;
+    li{
+      min-width:100px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #eeeeee;
+      &:last-child{
+        margin-bottom: 0;
+        padding-bottom: 5px;
+        border-bottom: none;
+      }
+      a{
+        display: block;
+        width:100%;
+      }
+    }
+  }
+}

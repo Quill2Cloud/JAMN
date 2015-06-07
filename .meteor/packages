@@ -15,6 +15,7 @@ browser-policy
 raix:handlebar-helpers
 ongoworks:speakingurl
 meteorhacks:subs-manager
+reactive-var
 
 # Performance Monitoring
 
@@ -24,12 +25,6 @@ meteorhacks:zones
 # Analytics
 
 okgrow:analytics
-
-# Styling
-
-fortawesome:fontawesome
-fourseven:scss
-fezvrasta:bootstrap-material-design-noicons
 
 # Testing
 
@@ -41,3 +36,14 @@ aldeed:simple-schema
 aldeed:collection2
 ongoworks:security
 alanning:roles
+
+# Styling
+
+fortawesome:fontawesome
+fourseven:scss
+fezvrasta:bootstrap-material-design
+
+# User Accounts
+
+useraccounts:bootstrap
+accounts-password

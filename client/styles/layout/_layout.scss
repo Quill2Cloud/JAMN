@@ -21,7 +21,13 @@ html, body {
   padding-right: 10px;
 }
 .header-left {
+  display: inline-block;
   height: 40px;
+}
+.header-right {
+  display: inline-block;
+  height: 40px;
+  float: right;
 }
 .header-item {
   display: inline-block;

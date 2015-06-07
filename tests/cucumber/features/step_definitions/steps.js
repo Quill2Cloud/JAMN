@@ -12,8 +12,19 @@
       return this.mirror.call('reset'); // this.ddp is a connection to the mirror
     });
 
-    this.Given(/^I am not logged in$/, function () {
-      return this.mirror.call('log-out');
+    this.Given(/^I am not logged in$/, function (callback) {
+      function logout(done) { Meteor.logout(done); }
+      this.browser.
+      executeAsync(logout).call(callback);
+    });
+
+    this.Given(/^I am logged in as "([^"]*)"$/, function (username, callback) {
+      function login(username, done) { Meteor.loginWithPassword(username, "password", done); }
+      this.browser.executeAsync(login, username).call(callback);
+    });
+
+    this.Given(/^there are registered users$/, function () {
+      return this.mirror.call('insertUsers');
     });
 
     this.Given(/^there are submitted songs$/, function () {
@@ -29,7 +40,27 @@
 
     this.When(/^I click on the link "([^"]*)"$/, function (element, callback) {
       this.browser.
+      waitForExist(element).
         click(element).
+        call(callback);
+    });
+
+    this.When(/^I click on the submit button$/, function (callback) {
+      this.browser.
+        click('.submit').
+        call(callback);
+    });
+
+    this.When(/^I submit the form "([^"]*)"$/, function (form, callback) {
+      this.browser.
+        submitForm(form).
+        pause(1000).
+        call(callback);
+    });
+
+    this.When(/^I enter "([^"]*)" into the "([^"]*)" field$/, function (value, field, callback) {
+      this.browser.
+        setValue('#at-field-'+field, value).
         call(callback);
     });
 
@@ -50,6 +81,12 @@
         getText('.logo').should.become(expectedTitle).and.notify(callback);
     });
 
+    this.Then(/^I should see the headline "([^"]*)"$/, function (expectedHeadline, callback) {
+      this.browser.
+        waitForVisible('.logo').
+        getText('.headline').should.become(expectedHeadline).and.notify(callback);
+    });
+
     this.Then(/^the "([^"]*)" tab is shown$/, function (expectedTab, callback) {
       this.browser.
       getText('.active').should.become(expectedTab).and.notify(callback);
@@ -62,10 +99,44 @@
       getText('#message-text').should.become(expectedMessage).and.notify(callback);
     });
 
+    this.Then(/^the "([^"]*)" input field is shown$/, function (field, callback) {
+      this.browser.
+        waitForVisible(field).
+        getValue(field).should.become('').and.notify(callback);
+    });
+
+    this.Then(/^"([^"]*)" is disabled$/, function (expectedDisabledElement, callback) {
+      this.browser.
+      pause(1000).
+      waitForVisible('.disabled').
+        getText('.disabled').should.become(expectedDisabledElement).and.notify(callback);
+    });
+
+    this.Then(/^user validation error message (\d+) is displayed saying "([^"]*)"$/, function (expectedMessage, expectedError, callback) {
+      this.browser.getText('//HTML/BODY/DIV[1]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/FIELDSET[1]/DIV['+expectedMessage+']/SPAN[2]')
+      .should.become(expectedError).and.notify(callback);
+    });
+
+    this.Then(/^the user accounts error message is displayed saying "([^"]*)"$/, function (expectedError, callback) {
+      this.browser.
+      getText('.at-error').should.become(expectedError).and.notify(callback);
+    });
+
+    this.Then(/^the menu item "([^"]*)" is shown and displays "([^"]*)" in the navigation bar$/, function (expectedMenuItem, expectedMenuValue, callback) {
+      this.browser.
+        getText(expectedMenuItem).should.become(expectedMenuValue).and.notify(callback);
+    });
+
     this.Then(/^the song title is "([^"]*)"$/, function (expectedTitle, callback) {
       this.browser.
       getText('#song-title').should.become(expectedTitle).and.notify(callback);
     });
+
+    this.Then(/^the song username is "([^"]*)"$/, function (expectedUsername, callback) {
+      this.browser.
+      getText('.username').should.become(expectedUsername).and.notify(callback);
+    });
+
   };
 
 })();

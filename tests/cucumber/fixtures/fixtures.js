@@ -8,7 +8,13 @@
       Collections.songs.remove({});
     },
     'log-out': function () {
-      // TODO: if user is logged in call logout
+      //
+    },
+    'insertUsers': function () {
+      Meteor.users.remove({});
+      _.each(users, function (user) {
+        Meteor.users.insert(user);
+      });
     },
     'insertSongs': function (number) {
       Collections.songs.remove({});
@@ -22,7 +28,24 @@
     {
       "_id" : "2ZyzagoaDjsbd9q6Y",
       "createdAt" : "2015-01-31T07:02:47.625Z",
-      "username" : "Tester 1"
+      "services" : {
+          "password" : {
+              "bcrypt" : "$2a$10$NXm4uqlV6uJw.lYIDKPrH.RaQhrYOx.c6vKDybAu5MmQiHcssiTBO"
+          },
+          "resume" : {
+              "loginTokens" : []
+          }
+      },
+      "username" : "Tester 1",
+      "emails" : [
+          {
+              "address" : "tester1@jamn.com",
+              "verified" : false
+          }
+      ],
+      "profile" : {
+          "slug" : "tester-1"
+      }
     }
   ];
 

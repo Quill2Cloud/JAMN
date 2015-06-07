@@ -2,9 +2,13 @@ body {
   font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
 }
 a:link, a:visited, a:active, a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+.headline {
   font-weight: 700;
   font-size: 18px;
 }
