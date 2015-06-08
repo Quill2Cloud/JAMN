@@ -22,6 +22,7 @@ Feature: Show a single songs that have been shared
     Then the "Music" tab is shown
     And  the song title is "Artist - Title"
     And  the song username is "Tester 1"
+    And  the posted date is time since "2015-02-02T03:16:26.775Z"
 
   @dev
   Scenario:

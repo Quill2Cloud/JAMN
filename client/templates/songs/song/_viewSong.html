@@ -1,10 +1,15 @@
 <template name="_viewSong">
   <div class="post">
     <a href="{{pathFor 'song' data=slugs}}" class="title" id="song-title">{{{artist}}} - {{{title}}}</a>
-    <div>
-      {{#with createdBy}}
-        {{> _username}}
-      {{/with}}
+    <div class="post-meta">
+      <div class="post-meta-item">
+        {{#with createdBy}}
+          {{> _username}}
+        {{/with}}
+      </div>
+      <div class="post-meta-item">
+        {{#if createdAt}}<span class="posted-time"> posted {{timeAgo createdAt}}</span>{{/if}}
+      </div>
     </div>
   </div>
 </template>

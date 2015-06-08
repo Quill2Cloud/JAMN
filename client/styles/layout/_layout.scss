@@ -53,3 +53,11 @@ html, body {
   border-bottom:1px solid #e7eff2;
   background: white;
 }
+.post-meta-item{
+  display: inline-block;
+  vertical-align: middle;
+  line-height:1.5;
+  span {
+    vertical-align: text-bottom;
+  }
+}

@@ -16,6 +16,7 @@ raix:handlebar-helpers
 ongoworks:speakingurl
 meteorhacks:subs-manager
 reactive-var
+momentjs:moment
 
 # Performance Monitoring
 

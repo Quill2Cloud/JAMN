@@ -137,6 +137,16 @@
       getText('.username').should.become(expectedUsername).and.notify(callback);
     });
 
+    this.Then(/^the posted date is time since "([^"]*)"$/, function (datetime, callback) {
+      this.client.executeAsync(function(datetime, done){
+        setTimeout(function(){
+          var timeAgo = 'posted ' + moment(datetime).fromNow();
+          done(timeAgo);
+        }, 3000);
+      }, datetime, function(err, result) {
+        browser.getText('.posted-time').should.become(result.value).and.notify(callback);
+      })
+    });
   };
 
 })();

@@ -130,6 +130,7 @@
       "Controllers": true,
       "Schemas": true,
       "Collections": true,
+      "moment": true,
       // Global Functions
       "getEventData": true,
       "setMessage": true,
