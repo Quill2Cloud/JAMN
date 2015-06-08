@@ -59,7 +59,8 @@
       "title" : "Title",
       "titleSlug" : "title",
       "music" : [],
-      "commentCount" : 0
+      "commentCount" : 0,
+      "publicLists" : []
     }
   ];
 
