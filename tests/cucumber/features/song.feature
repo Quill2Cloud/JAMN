@@ -24,6 +24,7 @@ Feature: Show a single songs that have been shared
     And  the song username is "Tester 1"
     And  the posted date is time since "2015-02-02T03:16:26.775Z"
     And  the "#music-count" field is shown and displays "0"
+    And  the "#comment-count" field is shown and displays "0"
 
   @dev
   Scenario:
