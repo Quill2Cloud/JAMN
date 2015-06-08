@@ -57,7 +57,8 @@
       "artist" : "Artist",
       "artistSlug" : "artist",
       "title" : "Title",
-      "titleSlug" : "title"
+      "titleSlug" : "title",
+      "music" : []
     }
   ];
 

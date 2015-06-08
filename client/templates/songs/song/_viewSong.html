@@ -10,6 +10,13 @@
       <div class="post-meta-item">
         {{#if createdAt}}<span class="posted-time"> posted {{timeAgo createdAt}}</span>{{/if}}
       </div>
+      &nbsp;|&nbsp;
+      <div class="post-meta-item">
+        <a href="/songs/{{artistSlug}}/{{titleSlug}}/music">
+          <span id="music-count">{{getLength music}}</span>
+          <span><i class="c-icon fa fa-music"></i></span>
+        </a>
+      </div>
     </div>
   </div>
 </template>
