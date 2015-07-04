@@ -53,6 +53,15 @@ html, body {
   border-bottom:1px solid #e7eff2;
   background: white;
 }
+.post-module {
+  display: inline-block;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 10px;
+}
+.post-upvote {
+  float: right;
+}
 .post-meta-item{
   display: inline-block;
   vertical-align: middle;
@@ -60,4 +69,27 @@ html, body {
   span {
     vertical-align: text-bottom;
   }
+}
+.avatar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  margin-top: 3px;
+  margin-bottom: 4px;
+  margin-left: 3px;
+  margin-right: 3px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.highlight-avatar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  margin-top: -2px;
+  margin-left: -2px;
+  border-radius: 50%;
 }

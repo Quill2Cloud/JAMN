@@ -1,0 +1,9 @@
+<template name="_avatar">
+  {{#if user.profile.image}}
+    <div class="avatar" title="{{ user.username }}" slug="{{ user.slug }}" style="background-image:url({{ user.profile.image }});"></div>
+  {{else}}
+    <div class="avatar" title="{{ user.username }}" slug="{{ user.slug }}" style="background-color:{{ user.profile.color }};">
+      <span class="subtle text-light">{{ getInitials user }}</span>
+    </div>
+  {{/if}}
+</template>

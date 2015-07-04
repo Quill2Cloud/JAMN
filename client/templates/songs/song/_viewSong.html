@@ -1,36 +1,48 @@
 <template name="_viewSong">
   <div class="post">
-    <a href="{{pathFor 'song' data=slugs}}" class="title" id="song-title">{{{artist}}} - {{{title}}}</a>
-    <div class="post-meta">
-      <div class="post-meta-item">
-        {{#with createdBy}}
-          {{> _username}}
-        {{/with}}
-      </div>
-      <div class="post-meta-item">
-        {{#if createdAt}}<span class="posted-time"> posted {{timeAgo createdAt}}</span>{{/if}}
-      </div>
-      &nbsp;|&nbsp;
-      <div class="post-meta-item">
-        <a href="/songs/{{artistSlug}}/{{titleSlug}}/music">
-          <span id="music-count">{{getLength music}}</span>
-          <span><i class="fa fa-music"></i></span>
-        </a>
-      </div>
-      &nbsp;|&nbsp;
-      <div class="post-meta-item">
-        <a href="/songs/{{artistSlug}}/{{titleSlug}}/comments">
-          <span id="comment-count">{{commentCount}}</span>
-          <span><i class="fa fa-comment-o"></i></span>
-        </a>
-      </div>
-      &nbsp;|&nbsp;
-      <div class="post-meta-item">
-        <a href="/songs/{{artistSlug}}/{{titleSlug}}/lists">
-          <span id="list-count">{{getLength publicLists}}</span>
-          <span><i class="fa fa-list"></i></span>
-        </a>
+    <div class="post-module">
+      <a href="{{pathFor 'song' data=slugs}}" class="title" id="song-title">{{{artist}}} - {{{title}}}</a>
+      <div class="post-meta">
+        <div class="post-meta-item">
+          {{#with createdBy}}
+            {{> _username}}
+          {{/with}}
+        </div>
+        <div class="post-meta-item">
+          {{#if createdAt}}<span class="posted-time"> posted {{timeAgo createdAt}}</span>{{/if}}
+        </div>
+        &nbsp;|&nbsp;
+        <div class="post-meta-item">
+          <a href="/songs/{{artistSlug}}/{{titleSlug}}/music">
+            <span id="music-count">{{getLength music}}</span>
+            <span><i class="fa fa-music"></i></span>
+          </a>
+        </div>
+        &nbsp;|&nbsp;
+        <div class="post-meta-item">
+          <a href="/songs/{{artistSlug}}/{{titleSlug}}/comments">
+            <span id="comment-count">{{commentCount}}</span>
+            <span><i class="fa fa-comment-o"></i></span>
+          </a>
+        </div>
+        &nbsp;|&nbsp;
+        <div class="post-meta-item">
+          <a href="/songs/{{artistSlug}}/{{titleSlug}}/lists">
+            <span id="list-count">{{getLength publicLists}}</span>
+            <span><i class="fa fa-list"></i></span>
+          </a>
+        </div>
       </div>
     </div>
+
+
+
+    <div class="post-module post-upvote">
+      {{#each upvoters}}
+        {{> _avatar}}
+      {{/each}}
+    </div>
+
+
   </div>
 </template>

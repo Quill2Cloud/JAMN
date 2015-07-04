@@ -21,6 +21,7 @@ momentjs:moment
 # Performance Monitoring
 
 meteorhacks:kadira
+meteorhacks:kadira-debug
 meteorhacks:zones
 
 # Analytics

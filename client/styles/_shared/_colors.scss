@@ -62,3 +62,7 @@ a:hover {
     color: $darkTextColor !important;
   }
 }
+.text-light {
+  color: $lightTextColor;
+  opacity: $lightPrimaryTextOpacity;
+}

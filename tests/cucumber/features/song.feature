@@ -26,6 +26,7 @@ Feature: Show a single songs that have been shared
     And  the "#music-count" field is shown and displays "0"
     And  the "#comment-count" field is shown and displays "0"
     And  the "#list-count" field is shown and displays "0"
+    And  the ".avatar" field is shown and displays "T1"
 
   @dev
   Scenario:

@@ -44,7 +44,8 @@
           }
       ],
       "profile" : {
-          "slug" : "tester-1"
+        "slug" : "tester-1",
+        "color" : "#009688"
       }
     }
   ];
@@ -58,6 +59,7 @@
       "artistSlug" : "artist",
       "title" : "Title",
       "titleSlug" : "title",
+      "upvoters" : ["2ZyzagoaDjsbd9q6Y"],
       "music" : [],
       "commentCount" : 0,
       "publicLists" : []
