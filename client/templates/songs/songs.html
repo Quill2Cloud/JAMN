@@ -4,4 +4,7 @@
     <li role="presentation"><a href="/lists">Lists</a></li>
   </ul>
   {{> _secondaryMessage}}
+  {{#each songs}}
+    {{> _viewSong}}
+  {{/each}}
 </template>

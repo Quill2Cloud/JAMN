@@ -145,7 +145,7 @@
         }, 3000);
       }, datetime, function(err, result) {
         browser.getText('.posted-time').should.become(result.value).and.notify(callback);
-      })
+      });
     });
 
     this.Then(/^the "([^"]*)" field is shown and displays "([^"]*)"$/, function (expectedField, expectedValue, callback) {

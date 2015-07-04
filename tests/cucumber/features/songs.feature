@@ -23,3 +23,8 @@ Feature: Show songs that have been shared
   Scenario:
     When there are 0 songs
     Then an "info" message is displayed saying "Sorry, no songs found."
+
+  @dev
+  Scenario:
+    Given there are submitted songs
+    Then the song title is "Artist - Title"
