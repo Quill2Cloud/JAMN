@@ -1,9 +1,17 @@
 Template.userMenu.helpers({
     username: function () {
-      return Meteor.user().username;
+      if (Meteor.user()) {
+        return Meteor.user().username;
+      } else {
+        return "";
+      }
     },
     profileUrl: function () {
-      return '/users/' + Meteor.user().profile.slug;
+      if (Meteor.user()) {
+        return '/users/' + Meteor.user().profile.slug;
+      } else {
+        return "";
+      }
     }
 });
 
